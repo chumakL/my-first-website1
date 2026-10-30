@@ -110,5 +110,94 @@
 
 </div>
 
+<section class="git-panel" id="git">
+
+  <div class="section-heading">
+    <span class="git-symbol">⑂</span>
+    <h2>Результати роботи з Git</h2>
+  </div>
+
+  <p class="section-description">
+    Історія комітів, гілки та результати
+    виконання Git-команд.
+  </p>
+
+  <div class="git-tabs">
+
+    <input type="radio"
+           name="git-tab"
+           id="tab-status" checked>
+
+    <input type="radio"
+           name="git-tab"
+           id="tab-branch">
+
+    <input type="radio"
+           name="git-tab"
+           id="tab-log">
+
+    <input type="radio"
+           name="git-tab"
+           id="tab-merge">
+
+    <div class="tab-labels">
+      <label for="tab-status">Git Status</label>
+      <label for="tab-branch">Git Branch</label>
+      <label for="tab-log">Git Log</label>
+      <label for="tab-merge">Merge History</label>
+    </div>
+
+    <div class="terminal">
+
+      <div class="terminal-header">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+
+        <span class="terminal-title">
+          git-terminal
+        </span>
+      </div>
+
+      <div class="terminal-body">
+
+        <pre class="tab-content status"><code>$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</code></pre>
+
+        <pre class="tab-content branch"><code>$ git branch -a
+  feature
+* main
+  remotes/origin/feature
+  remotes/origin/main
+
+
+        <pre class="tab-content log"><code>$ git log --oneline
+fb3753c (HEAD -> main, origin/main) hobbies add
+bfaa199 Конфлікти вирішено
+a5b99bd Change page heading
+3bccf05 (feature) Update main heading
+7a3fd9b (origin/feature) Update hobbies list
+c0ec607 Add initial website
+
+        <pre class="tab-content merge"><code>$ git log --merges
+commit bfaa199a067f3d84dd45bf19e21b2ce770d0461d
+Merge: a5b99bd 3bccf05
+Author: Людмила <chumak349@gmail.com>
+Date:   Fri Oct 30 09:36:55 2026 +0200
+
+    Конфлікти вирішено
+</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 </body>
 </html>
